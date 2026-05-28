@@ -26,6 +26,7 @@
 - 咨询信息与地址复制
 - 移动端导航适配
 - 回到顶部按钮
+- 基础站点文件：`favicon`、`robots.txt`、`sitemap.xml`、`404.html`
 
 ## 本地运行
 
@@ -48,6 +49,14 @@ python -m http.server 8000
 3. 继续优化响应式和可访问性，比如键盘可操作、焦点样式、对比度
 4. 增加 GitHub Pages 部署说明，让页面可以直接在线访问
 5. 进一步统一文案口径，尽量贴近学校官网的正式表达
+
+## GitHub Pages
+
+如果仓库开启 GitHub Pages，可以直接用仓库根目录作为发布源。
+
+建议的访问地址通常是：
+
+`https://duyuxuan798.github.io/hit-intro/`
 
 ## 说明
 

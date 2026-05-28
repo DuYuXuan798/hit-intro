@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Harbin Institute of Technology icon</title>
+  <desc id="desc">Blue and gold circular academic emblem inspired by HIT colors.</desc>
+  <defs>
+    <linearGradient id="g1" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A62BF"/>
+      <stop offset="1" stop-color="#07254E"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="18" y1="14" x2="46" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6D79A"/>
+      <stop offset="1" stop-color="#D9A94F"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <circle cx="32" cy="32" r="18" fill="none" stroke="url(#g2)" stroke-width="2.5"/>
+  <path d="M22 20h6v24h-6V20Zm14 0h6v24h-6V20Z" fill="#FFFFFF"/>
+  <path d="M22 31h26v6H22v-6Z" fill="#F6D79A"/>
+  <path d="M18 46h28" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+</svg>

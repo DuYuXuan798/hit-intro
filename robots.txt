@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duyuxuan798.github.io/hit-intro/sitemap.xml
