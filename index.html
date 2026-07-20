@@ -3,266 +3,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>哈尔滨工业大学 | 一校三区总览</title>
-  <meta
-    name="description"
-    content="基于哈尔滨工业大学官方公开信息与公开素材制作的一校三区宣传总览页，涵盖哈尔滨、威海、深圳三地校区。"
-  >
-  <meta name="theme-color" content="#1556a6">
+  <meta name="description" content="哈尔滨工业大学一校三区静态简介页，汇集学校新闻、校区信息与官方服务入口。">
+  <meta name="theme-color" content="#071d3b">
+  <title>哈尔滨工业大学 | 一校三区</title>
   <link rel="preconnect" href="https://www.hit.edu.cn">
-  <link rel="preconnect" href="https://www.hitwh.edu.cn">
-  <link rel="preconnect" href="https://www.hitsz.edu.cn">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳至主要内容</a>
+
   <header class="site-header" id="top">
-    <div class="topbar">
-      <p>Official-inspired single page overview of Harbin Institute of Technology</p>
-      <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">访问官网</a>
+    <div class="service-bar">
+      <div class="shell service-bar-inner">
+        <p>HARBIN INSTITUTE OF TECHNOLOGY · EST. 1920</p>
+        <nav aria-label="快捷服务">
+          <a href="https://i.hit.edu.cn/" target="_blank" rel="noreferrer">校园门户</a>
+          <a href="https://news.hit.edu.cn/" target="_blank" rel="noreferrer">新闻网</a>
+          <a href="https://lib.hit.edu.cn/" target="_blank" rel="noreferrer">图书馆</a>
+          <a href="https://mail.hit.edu.cn/" target="_blank" rel="noreferrer">电子邮箱</a>
+          <a href="https://en.hit.edu.cn/" target="_blank" rel="noreferrer">EN</a>
+        </nav>
+      </div>
     </div>
-    <div class="nav-shell">
-      <a class="brand" href="#top" aria-label="哈尔滨工业大学首页">
-        <img
-          src="https://www.hit.edu.cn/_upload/site/00/ee/238/logo.png"
-          alt="哈尔滨工业大学校徽"
-        >
-        <div class="brand-copy">
+
+    <div class="portal-header shell">
+      <a class="brand" href="#top" aria-label="返回页首">
+        <span class="brand-mark" aria-hidden="true">HIT</span>
+        <span class="brand-name">
           <strong>哈尔滨工业大学</strong>
-          <span>Harbin Institute of Technology</span>
-        </div>
+          <small>Harbin Institute of Technology</small>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="portal-nav">
+        <span class="sr-only">打开导航</span>
+        <i></i><i></i><i></i>
       </button>
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
+
+      <nav class="portal-nav" id="portal-nav" aria-label="主导航">
         <a href="#overview">学校概览</a>
+        <a href="#news">工大要闻</a>
         <a href="#campuses">一校三区</a>
-        <a href="#services">高频入口</a>
+        <a href="#services">服务大厅</a>
         <a href="#contact">联系信息</a>
+        <a class="nav-cta" href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">访问官网 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-backdrop">
-        <img
-          src="https://www.hit.edu.cn/_upload/article/images/3a/12/6e92f5e040df91ce150f97f386da/81c88585-7622-4dee-89ce-8b0ad4e22928.jpg"
-          alt="哈尔滨工业大学校园风貌"
-        >
+  <main id="main-content">
+    <section class="hero" id="overview" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://www.hit.edu.cn/_upload/article/images/3a/12/6e92f5e040df91ce150f97f386da/81c88585-7622-4dee-89ce-8b0ad4e22928.jpg" alt="">
       </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-content section-shell">
-        <div class="hero-copyblock">
-          <p class="eyebrow">National Key University Since 1920</p>
-          <p class="hero-kicker">中国航天第一校</p>
-          <h1>哈尔滨工业大学</h1>
-          <p class="hero-en">Harbin Institute of Technology</p>
-          <p class="hero-copy">
-            扎根龙江、联动威海、面向湾区。学校在百年发展中形成了以哈尔滨校本部为根基、
-            威海校区与深圳校区协同支撑的一校三区办学格局，在工科、航天与前沿交叉领域持续彰显哈工大气质。
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+      <div class="shell hero-layout">
+        <div class="hero-copy" data-reveal>
+          <p class="kicker">NATIONAL KEY UNIVERSITY / 1920 - NOW</p>
+          <h1 id="hero-title">规格严格<br><em>功夫到家</em></h1>
+          <p class="hero-intro">
+            从哈尔滨到威海、深圳，哈尔滨工业大学以一校三区协同发展的格局，
+            面向国家重大战略需求，持续探索工程、科学与未来技术的边界。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">进入哈工大官网</a>
-            <a class="button button-secondary" href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">查看官方校园地图</a>
-          </div>
-          <div class="hero-badges">
-            <span>工信部直属</span>
-            <span>双一流建设高校</span>
-            <span>哈尔滨 · 威海 · 深圳</span>
+            <a class="button button-gold" href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">进入学校官网 <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#campuses">探索三地校区 <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <aside class="hero-aside">
-          <div class="hero-plaque">
-            <p>HIT Overview</p>
-            <strong>一校三区协同发展</strong>
-            <span>Official gateways, campus overview and public information portal</span>
+
+        <aside class="hero-index" data-reveal aria-label="学校概览数据">
+          <div class="index-topline"><span>01</span><span>HIT / INDEX</span></div>
+          <div class="index-figure">
+            <strong>106</strong>
+            <span>YEAR<br>JOURNEY</span>
           </div>
-          <dl class="hero-metrics">
-            <div>
-              <dt>建校</dt>
-              <dd>1920</dd>
-            </div>
-            <div>
-              <dt>办学布局</dt>
-              <dd>一校三区</dd>
-            </div>
-            <div>
-              <dt>主站入口</dt>
-              <dd>hit.edu.cn</dd>
-            </div>
+          <div class="index-rule"></div>
+          <dl>
+            <div><dt>办学布局</dt><dd>一校三区</dd></div>
+            <div><dt>直属单位</dt><dd>工业和信息化部</dd></div>
+            <div><dt>主站入口</dt><dd>hit.edu.cn</dd></div>
           </dl>
-          <div class="hero-ribbon">
-            <span>规格严格</span>
-            <span>功夫到家</span>
-          </div>
+          <p class="index-note">EXPLORE · CREATE · SERVE</p>
         </aside>
+      </div>
+
+      <div class="hero-ticker" aria-label="快捷入口">
+        <div class="shell">
+          <span>HIT PORTAL</span>
+          <a href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">校园地图 <b>↗</b></a>
+          <a href="https://zsb.hit.edu.cn/" target="_blank" rel="noreferrer">本科招生 <b>↗</b></a>
+          <a href="https://yzb.hit.edu.cn/" target="_blank" rel="noreferrer">研究生招生 <b>↗</b></a>
+          <a href="https://keyan.hit.edu.cn/" target="_blank" rel="noreferrer">科学研究 <b>↗</b></a>
+        </div>
       </div>
     </section>
 
-    <section class="section portal-hub" id="overview">
-      <div class="section-shell">
-        <div class="section-heading split compact-heading">
+    <section class="news-section section-space" id="news" aria-labelledby="news-title">
+      <div class="shell">
+        <div class="section-heading editorial-heading" data-reveal>
           <div>
-            <p class="section-tag">School Overview</p>
-            <h2>学校概览与门户入口</h2>
+            <p class="section-label">HIT NEWSROOM</p>
+            <h2 id="news-title">工大要闻</h2>
           </div>
-          <p>把最常用的信息收拢成三栏门户，减少留白，让首页看起来更像高校官网的首页入口。</p>
+          <a class="text-link" href="https://news.hit.edu.cn/" target="_blank" rel="noreferrer">进入新闻网 <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="portal-hub-grid">
-          <div class="hub-column hub-left">
-            <article class="hub-card intro-card">
-              <p class="section-tag">Official Summary</p>
-              <h3>哈尔滨工业大学</h3>
-              <p>
-                工信部直属、国家“双一流”建设高校，建校于1920年，形成哈尔滨、威海、深圳一校三区协同发展的办学格局。
-              </p>
-              <div class="hero-badges compact">
-                <span>百年积淀</span>
-                <span>航天特色</span>
-                <span>三地协同</span>
-              </div>
-            </article>
-            <article class="hub-card news-card">
-              <p class="section-tag">News</p>
-              <h3>最新入口</h3>
-              <div class="mini-link-list">
-                <a href="https://today.hit.edu.cn/" target="_blank" rel="noreferrer">哈工大新闻</a>
-                <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">学校主站</a>
-                <a href="https://zsb.hit.edu.cn/" target="_blank" rel="noreferrer">本科招生</a>
-                <a href="https://yzb.hit.edu.cn/" target="_blank" rel="noreferrer">研究生招生</a>
-              </div>
-            </article>
-          </div>
 
-          <div class="hub-column hub-center" id="campuses">
-            <article class="hub-card campus-overview-card">
-              <p class="section-tag">One University, Three Campuses</p>
-              <h3>一校三区</h3>
-              <div class="campus-grid compact-campus">
-                <div class="campus-chip">
-                  <strong>哈尔滨</strong>
-                  <span>南岗区西大直街92号</span>
-                  <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">官网</a>
-                </div>
-                <div class="campus-chip">
-                  <strong>威海</strong>
-                  <span>文化西路2号</span>
-                  <a href="https://www.hitwh.edu.cn/" target="_blank" rel="noreferrer">官网</a>
-                </div>
-                <div class="campus-chip">
-                  <strong>深圳</strong>
-                  <span>深圳大学城校区</span>
-                  <a href="https://www.hitsz.edu.cn/" target="_blank" rel="noreferrer">官网</a>
-                </div>
-              </div>
-            </article>
-            <article class="hub-card map-card compact-map" id="locations">
-              <p class="section-tag">Locations</p>
-              <h3>校区位置</h3>
-              <div class="map-surface compact-surface" aria-hidden="true">
-                <span class="route route-one"></span>
-                <span class="route route-two"></span>
-                <div class="map-node harbin">
-                  <strong>哈尔滨</strong>
-                  <span>Campus</span>
-                </div>
-                <div class="map-node weihai">
-                  <strong>威海</strong>
-                  <span>Campus</span>
-                </div>
-                <div class="map-node shenzhen">
-                  <strong>深圳</strong>
-                  <span>Campus</span>
-                </div>
-              </div>
-              <div class="map-notes compact-notes">
-                <a href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">官方校园地图</a>
-                <span>按楼宇、道路和办事地点快速检索。</span>
-              </div>
-            </article>
-          </div>
+        <div class="news-layout">
+          <article class="lead-story" data-reveal>
+            <div class="story-visual">
+              <span class="story-number">01</span>
+              <span class="story-caption">HIT / DISCOVER</span>
+            </div>
+            <div class="lead-story-content">
+              <p class="story-meta">FOCUS · HARBIN INSTITUTE OF TECHNOLOGY</p>
+              <h3>面向未来，持续书写科技报国的新篇章</h3>
+              <p>聚焦学校新闻、学术活动、人才培养与科研进展，了解工大正在发生的重要故事。</p>
+              <a class="story-link" href="https://news.hit.edu.cn/" target="_blank" rel="noreferrer">阅读工大新闻 <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
 
-          <div class="hub-column hub-right" id="services">
-            <article class="hub-card service-card">
-              <p class="section-tag">Quick Access</p>
-              <h3>高频入口</h3>
-              <div class="quick-grid">
-                <a href="https://lib.hit.edu.cn/" target="_blank" rel="noreferrer">图书馆</a>
-                <a href="https://keyan.hit.edu.cn/" target="_blank" rel="noreferrer">科研</a>
-                <a href="https://www.international.hit.edu.cn/" target="_blank" rel="noreferrer">国际教育</a>
-                <a href="https://www.hitwh.edu.cn/xqgk/list.htm" target="_blank" rel="noreferrer">威海概况</a>
-                <a href="https://www.hitsz.edu.cn/main.htm" target="_blank" rel="noreferrer">深圳交通</a>
-                <a href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">校园地图</a>
-              </div>
-            </article>
-            <article class="hub-card consult-card">
-              <p class="section-tag">Consulting</p>
-              <h3>咨询服务</h3>
-              <div class="service-list compact-list">
-                <div>
-                  <strong>招生咨询</strong>
-                  <span>zsb.hit.edu.cn / yzb.hit.edu.cn</span>
-                </div>
-                <div>
-                  <strong>到访咨询</strong>
-                  <span>map.hit.edu.cn</span>
-                </div>
-                <div>
-                  <strong>联络电话</strong>
-                  <span>哈尔滨 / 威海 / 深圳</span>
-                </div>
-              </div>
-              <div class="campus-links compact-links">
-                <button class="text-action copy-address" type="button" data-address="黑龙江省哈尔滨市南岗区西大直街92号">复制哈尔滨地址</button>
-                <button class="text-action copy-address" type="button" data-address="山东省威海市文化西路2号">复制威海地址</button>
-                <button class="text-action copy-address" type="button" data-address="深圳市南山区桃源街道深圳大学城哈尔滨工业大学校区">复制深圳地址</button>
-              </div>
-            </article>
+          <div class="headline-panel" data-reveal>
+            <div class="headline-panel-top">
+              <p>NEWS INDEX</p>
+              <span>更新于官网新闻频道</span>
+            </div>
+            <ol class="headline-list">
+              <li>
+                <a href="https://news.hit.edu.cn/" target="_blank" rel="noreferrer">
+                  <time datetime="2026-07">07 / 18</time>
+                  <span>工大要闻与前沿动态，见证创新力量持续涌现</span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </li>
+              <li>
+                <a href="https://today.hit.edu.cn/" target="_blank" rel="noreferrer">
+                  <time datetime="2026-07">07 / 17</time>
+                  <span>学术活动、讲座与校园文化日程一站获取</span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </li>
+              <li>
+                <a href="https://keyan.hit.edu.cn/" target="_blank" rel="noreferrer">
+                  <time datetime="2026-07">07 / 16</time>
+                  <span>走近高水平科研平台与关键领域创新成果</span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </li>
+              <li>
+                <a href="https://zsb.hit.edu.cn/" target="_blank" rel="noreferrer">
+                  <time datetime="2026-07">07 / 15</time>
+                  <span>本科招生信息与报考服务官方入口</span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              </li>
+            </ol>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="campus-feature" id="campuses" aria-labelledby="campus-title">
+      <div class="campus-rings" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="section-heading on-dark" data-reveal>
+          <div>
+            <p class="section-label">ONE UNIVERSITY · THREE CAMPUSES</p>
+            <h2 id="campus-title">一校三区，山海同频</h2>
+          </div>
+          <p>根植龙江，依海而立，向湾而兴。三地校区共享工大基因，协同回应时代命题。</p>
+        </div>
+
+        <div class="campus-rail">
+          <article class="campus-card harbin-card" data-reveal>
+            <p class="campus-seq">01 / HARBIN</p>
+            <div class="campus-city"><span>哈尔滨</span><i>HRB</i></div>
+            <p>哈尔滨校本部，扎根黑土地，传承百年工大精神。</p>
+            <address>黑龙江省哈尔滨市南岗区西大直街92号</address>
+            <div class="campus-actions">
+              <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">校本部官网 ↗</a>
+              <button class="copy-address" type="button" data-address="黑龙江省哈尔滨市南岗区西大直街92号">复制地址</button>
+            </div>
+          </article>
+
+          <article class="campus-card weihai-card" data-reveal>
+            <p class="campus-seq">02 / WEIHAI</p>
+            <div class="campus-city"><span>威海</span><i>WH</i></div>
+            <p>威海校区，面向海洋、服务山东，连接产业与创新。</p>
+            <address>山东省威海市文化西路2号</address>
+            <div class="campus-actions">
+              <a href="https://www.hitwh.edu.cn/" target="_blank" rel="noreferrer">威海校区官网 ↗</a>
+              <button class="copy-address" type="button" data-address="山东省威海市文化西路2号">复制地址</button>
+            </div>
+          </article>
+
+          <article class="campus-card shenzhen-card" data-reveal>
+            <p class="campus-seq">03 / SHENZHEN</p>
+            <div class="campus-city"><span>深圳</span><i>SZ</i></div>
+            <p>深圳校区，立足大湾区，融入前沿科技创新生态。</p>
+            <address>深圳市南山区桃源街道深圳大学城哈尔滨工业大学校区</address>
+            <div class="campus-actions">
+              <a href="https://www.hitsz.edu.cn/" target="_blank" rel="noreferrer">深圳校区官网 ↗</a>
+              <button class="copy-address" type="button" data-address="深圳市南山区桃源街道深圳大学城哈尔滨工业大学校区">复制地址</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="campus-map-link" data-reveal>
+          <span class="map-pulse" aria-hidden="true"></span>
+          <p><strong>校园位置与来访导航</strong><span>按楼宇、道路和办事地点查找校本部信息</span></p>
+          <a class="button button-outline-light" href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">打开官方校园地图 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-hall section-space" id="services" aria-labelledby="service-title">
+      <div class="shell">
+        <div class="service-header" data-reveal>
+          <div>
+            <p class="section-label">SERVICE HALL</p>
+            <h2 id="service-title">常用服务，一步抵达</h2>
+          </div>
+          <p>将最常使用的官方入口集中呈现，减少跳转路径，把时间留给真正重要的事。</p>
+        </div>
+
+        <div class="service-grid">
+          <a class="service-card featured-service" href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">◎</span>
+            <span class="service-name">校园地图</span>
+            <span class="service-desc">建筑、道路与办事地点导航</span>
+            <b>↗</b>
+          </a>
+          <a class="service-card" href="https://zsb.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">01</span><span class="service-name">本科招生</span><span class="service-desc">报考信息与招生服务</span><b>↗</b>
+          </a>
+          <a class="service-card" href="https://yzb.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">02</span><span class="service-name">研究生招生</span><span class="service-desc">研究生教育与招生资讯</span><b>↗</b>
+          </a>
+          <a class="service-card" href="https://lib.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">03</span><span class="service-name">图书馆</span><span class="service-desc">资源、服务与空间预约</span><b>↗</b>
+          </a>
+          <a class="service-card" href="https://www.international.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">04</span><span class="service-name">国际教育</span><span class="service-desc">交流合作与国际学生服务</span><b>↗</b>
+          </a>
+          <a class="service-card" href="https://xxgk.hit.edu.cn/" target="_blank" rel="noreferrer" data-reveal>
+            <span class="service-icon">05</span><span class="service-name">信息公开</span><span class="service-desc">公开信息与办事指引</span><b>↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="consult-strip" aria-labelledby="consult-title">
+      <div class="shell consult-layout" data-reveal>
+        <div>
+          <p class="section-label">CONSULTATION DESK</p>
+          <h2 id="consult-title">需要进一步了解？</h2>
+          <p>招生、到访、校区信息与校园服务，请优先通过对应官方入口获取最新信息。</p>
+        </div>
+        <div class="consult-links">
+          <a href="https://zsb.hit.edu.cn/" target="_blank" rel="noreferrer">本科咨询</a>
+          <a href="https://yzb.hit.edu.cn/" target="_blank" rel="noreferrer">研招咨询</a>
+          <a href="https://map.hit.edu.cn/" target="_blank" rel="noreferrer">到访导航</a>
+          <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">学校主站</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="contact">
-    <div class="section-shell footer-grid">
-      <div>
-        <p class="section-tag">Contact</p>
-        <h2>联系信息</h2>
-        <p>
-          本页面为基于公开信息制作的静态展示页，视觉风格参考哈工大官方站点，不代表学校官方网站。
-        </p>
+    <div class="shell footer-main">
+      <div class="footer-intro">
+        <span class="brand-mark" aria-hidden="true">HIT</span>
+        <p>本页面为基于公开信息制作的静态简介页，视觉参考高校门户网站，不代表哈尔滨工业大学官方网站。</p>
       </div>
-      <div class="footer-column">
-        <h3>校本部</h3>
-        <p>黑龙江省哈尔滨市南岗区西大直街92号</p>
-        <a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">www.hit.edu.cn</a>
-      </div>
-      <div class="footer-column">
-        <h3>威海校区</h3>
-        <p>山东省威海市文化西路2号</p>
-        <a href="https://www.hitwh.edu.cn/" target="_blank" rel="noreferrer">www.hitwh.edu.cn</a>
-      </div>
-      <div class="footer-column">
-        <h3>深圳校区</h3>
-        <p>深圳市南山区桃源街道深圳大学城哈尔滨工业大学校区</p>
-        <a href="https://www.hitsz.edu.cn/" target="_blank" rel="noreferrer">www.hitsz.edu.cn</a>
+      <div class="footer-links">
+        <div><h3>哈尔滨校本部</h3><p>黑龙江省哈尔滨市南岗区西大直街92号<br>邮编：150001</p><a href="https://www.hit.edu.cn/" target="_blank" rel="noreferrer">访问官网 ↗</a></div>
+        <div><h3>威海校区</h3><p>山东省威海市文化西路2号<br>邮编：264209</p><a href="https://www.hitwh.edu.cn/" target="_blank" rel="noreferrer">访问官网 ↗</a></div>
+        <div><h3>深圳校区</h3><p>深圳市南山区桃源街道深圳大学城<br>邮编：518055</p><a href="https://www.hitsz.edu.cn/" target="_blank" rel="noreferrer">访问官网 ↗</a></div>
       </div>
     </div>
-    <div class="footer-bottom section-shell">
-      <p>Sources: hit.edu.cn / hitwh.edu.cn / hitsz.edu.cn / map.hit.edu.cn</p>
-      <p><span id="year"></span> Harbin Institute of Technology Overview Page</p>
+    <div class="shell footer-bottom">
+      <p>Sources: hit.edu.cn · hitwh.edu.cn · hitsz.edu.cn · map.hit.edu.cn</p>
+      <p>© <span id="year"></span> HIT Introduction Page</p>
     </div>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="回到顶部">TOP</button>
-
+  <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
+  <button class="back-to-top" type="button" aria-label="返回页首">TOP</button>
   <script src="./script.js"></script>
 </body>
 </html>

@@ -1,102 +1,130 @@
 const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
-const navLinks = [...document.querySelectorAll(".site-nav a")];
+const portalNav = document.querySelector(".portal-nav");
+const navLinks = [...document.querySelectorAll(".portal-nav > a[href^='#']")];
 const copyButtons = [...document.querySelectorAll(".copy-address")];
 const topButton = document.querySelector(".back-to-top");
+const statusMessage = document.querySelector("#status-message");
 const yearTarget = document.querySelector("#year");
-const revealTargets = [...document.querySelectorAll(".hub-card, .section-heading, .hero-copyblock, .hero-aside")];
+const revealTargets = [...document.querySelectorAll("[data-reveal]")];
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
 
-if (navToggle && siteNav) {
+const announce = (message) => {
+  if (!statusMessage) return;
+
+  statusMessage.textContent = message;
+  statusMessage.classList.add("is-visible");
+
+  window.setTimeout(() => {
+    statusMessage.classList.remove("is-visible");
+  }, 2200);
+};
+
+if (navToggle && portalNav) {
   navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
+    const isOpen = portalNav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
+      portalNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
+const fallbackCopy = (text) => {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.opacity = "0";
+  document.body.append(textArea);
+  textArea.select();
+
+  const copied = document.execCommand("copy");
+  textArea.remove();
+  return copied;
+};
+
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
     const address = button.dataset.address;
+    if (!address) return;
+
+    let copied = false;
 
     try {
-      await navigator.clipboard.writeText(address);
-      const previousText = button.textContent;
-      button.textContent = "已复制";
-      button.classList.add("is-success");
-      window.setTimeout(() => {
-        button.textContent = previousText;
-        button.classList.remove("is-success");
-      }, 1400);
-    } catch (error) {
-      window.alert(`复制失败，请手动复制：${address}`);
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(address);
+        copied = true;
+      } else {
+        copied = fallbackCopy(address);
+      }
+    } catch {
+      copied = fallbackCopy(address);
     }
+
+    const originalLabel = button.textContent;
+    button.textContent = copied ? "地址已复制" : "请手动复制";
+    announce(copied ? "校区地址已复制到剪贴板" : address);
+
+    window.setTimeout(() => {
+      button.textContent = originalLabel;
+    }, 1800);
   });
 });
 
 if (topButton) {
   topButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
   });
+
+  const updateTopButton = () => {
+    topButton.classList.toggle("is-visible", window.scrollY > 560);
+  };
+
+  window.addEventListener("scroll", updateTopButton, { passive: true });
+  updateTopButton();
 }
 
-const sections = [...document.querySelectorAll("main [id], footer[id]")];
+const sections = [...document.querySelectorAll("main > section[id], footer[id]")];
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+if ("IntersectionObserver" in window) {
+  const navigationObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries.find((entry) => entry.isIntersecting);
+      if (!visibleEntry) return;
 
-      const currentId = `#${entry.target.id}`;
+      const currentHash = "#" + visibleEntry.target.id;
       navLinks.forEach((link) => {
-        link.classList.toggle("is-current", link.getAttribute("href") === currentId);
+        link.classList.toggle("is-current", link.getAttribute("href") === currentHash);
       });
-    });
-  },
-  {
-    threshold: 0.28,
-    rootMargin: "-15% 0px -45% 0px",
-  }
-);
+    },
+    { rootMargin: "-18% 0px -62% 0px", threshold: 0.05 }
+  );
 
-sections.forEach((section) => sectionObserver.observe(section));
+  sections.forEach((section) => navigationObserver.observe(section));
+}
 
-revealTargets.forEach((item) => item.classList.add("reveal"));
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealTargets.forEach((item) => revealObserver.observe(item));
-
-const updateTopButton = () => {
-  if (!topButton) {
-    return;
-  }
-
-  topButton.classList.toggle("is-visible", window.scrollY > 480);
-};
-
-window.addEventListener("scroll", updateTopButton, { passive: true });
-updateTopButton();
+  revealTargets.forEach((element) => revealObserver.observe(element));
+} else {
+  revealTargets.forEach((element) => element.classList.add("is-visible"));
+}
