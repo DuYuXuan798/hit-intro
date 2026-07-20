@@ -50,8 +50,10 @@ img { display: block; max-width: 100%; }
 }
 .service-bar p { margin: 0; font-size: 10px; letter-spacing: .16em; }
 .service-bar nav { display: flex; align-items: stretch; }
-.service-bar a { padding: 9px 12px; border-left: 1px solid rgba(216, 238, 255, .12); transition: color .2s, background .2s; }
-.service-bar a:hover { color: var(--gold-300); background: rgba(255,255,255,.06); }
+.service-bar a, .sound-toggle { min-height: 34px; padding: 9px 12px; border: 0; border-left: 1px solid rgba(216, 238, 255, .12); color: inherit; background: transparent; font-family: var(--sans); font-size: inherit; cursor: pointer; transition: color .2s, background .2s; }
+.service-bar a:hover, .sound-toggle:hover, .sound-toggle.is-enabled { color: var(--gold-300); background: rgba(255,255,255,.06); }
+.sound-toggle span { display: inline-block; margin-right: 4px; color: var(--gold-300); font-size: 15px; line-height: 0; vertical-align: -1px; }
+.sound-toggle.is-enabled span { animation: sound-glow 1.8s ease-in-out infinite; }
 
 .site-header { position: sticky; top: 0; z-index: 30; box-shadow: 0 2px 18px rgba(4,21,46,.08); background: rgba(255,255,255,.96); backdrop-filter: blur(12px); }
 .portal-header { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 26px; }
@@ -237,6 +239,7 @@ img { display: block; max-width: 100%; }
 [data-reveal]:nth-child(2) { transition-delay: .08s; }
 [data-reveal]:nth-child(3) { transition-delay: .16s; }
 @keyframes pulse { from { opacity: .9; transform: scale(.65); } to { opacity: 0; transform: scale(1.7); } }
+@keyframes sound-glow { 50% { text-shadow: 0 0 9px var(--gold-300); transform: scale(1.18); } }
 
 @media (max-width: 1060px) {
   .portal-nav { gap: 15px; }
@@ -250,6 +253,7 @@ img { display: block; max-width: 100%; }
   :root { --shell: min(100% - 32px, 680px); }
   .service-bar-inner { justify-content: center; }
   .service-bar p, .service-bar a:nth-child(2), .service-bar a:nth-child(3), .service-bar a:nth-child(4) { display: none; }
+  .sound-toggle { padding-inline: 10px; }
   .site-header { position: relative; }
   .portal-header { min-height: 66px; }
   .brand-mark { width: 39px; height: 39px; font-size: 11px; }
